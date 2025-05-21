@@ -1,0 +1,134 @@
+@tailwind base; /* Imports Tailwind's base styles */
+@tailwind components; /* Imports Tailwind's component classes */
+@tailwind utilities; /* Imports Tailwind's utility classes */
+
+@layer base {
+  :root {
+    /* Core colors for UI elements */
+    --background: 0 0% 100%; /* White background */
+    --foreground: 222.2 84% 4.9%; /* Dark text color */
+
+    /* Card styling */
+    --card: 0 0% 100%; /* White card background */
+    --card-foreground: 222.2 84% 4.9%; /* Dark text on cards */
+
+    /* Popover styling */
+    --popover: 0 0% 100%; /* White popover background */
+    --popover-foreground: 222.2 84% 4.9%; /* Dark text on popovers */
+
+    /* Button and primary element colors */
+    --primary: 222.2 47.4% 11.2%; /* Dark blue-gray primary color */
+    --primary-foreground: 210 40% 98%; /* Light text on primary elements */
+
+    /* Secondary element colors */
+    --secondary: 210 40% 96.1%; /* Light gray secondary color */
+    --secondary-foreground: 222.2 47.4% 11.2%; /* Dark text on secondary elements */
+
+    /* Muted element colors */
+    --muted: 210 40% 96.1%; /* Light gray muted background */
+    --muted-foreground: 215.4 16.3% 46.9%; /* Gray text for muted elements */
+
+    /* Accent colors */
+    --accent: 210 40% 96.1%; /* Light gray accent color */
+    --accent-foreground: 222.2 47.4% 11.2%; /* Dark text on accent elements */
+
+    /* Destructive/error colors */
+    --destructive: 0 84.2% 60.2%; /* Red for warnings/errors */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive elements */
+
+    /* Border, input and focus colors */
+    --border: 214.3 31.8% 91.4%; /* Light gray border color */
+    --input: 214.3 31.8% 91.4%; /* Light gray input background */
+    --ring: 222.2 84% 4.9%; /* Dark focus ring color */
+
+    /* Border radius */
+    --radius: 0.5rem; /* Rounded corners size */
+
+    /* Sidebar specific colors */
+    --sidebar-background: 0 0% 98%; /* Off-white sidebar background */
+    --sidebar-foreground: 240 5.3% 26.1%; /* Dark gray sidebar text */
+    --sidebar-primary: 240 5.9% 10%; /* Near-black sidebar primary */
+    --sidebar-primary-foreground: 0 0% 98%; /* Off-white text on sidebar primary */
+    --sidebar-accent: 240 4.8% 95.9%; /* Light gray sidebar accent */
+    --sidebar-accent-foreground: 240 5.9% 10%; /* Near-black text on sidebar accent */
+    --sidebar-border: 220 13% 91%; /* Light gray sidebar borders */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* Blue sidebar focus rings */
+  }
+
+  .dark {
+    /* Dark mode uses light text on dark backgrounds */
+    --background: 222.2 84% 4.9%; /* Dark background */
+    --foreground: 210 40% 98%; /* Light text */
+
+    /* Dark mode card styling */
+    --card: 222.2 84% 4.9%; /* Dark card background */
+    --card-foreground: 210 40% 98%; /* Light text on cards */
+
+    /* Dark mode popover styling */
+    --popover: 222.2 84% 4.9%; /* Dark popover background */
+    --popover-foreground: 210 40% 98%; /* Light text on popovers */
+
+    /* Dark mode primary colors (inverted from light mode) */
+    --primary: 210 40% 98%; /* Light primary color */
+    --primary-foreground: 222.2 47.4% 11.2%; /* Dark text on primary elements */
+
+    /* Dark mode secondary colors */
+    --secondary: 217.2 32.6% 17.5%; /* Darker gray secondary color */
+    --secondary-foreground: 210 40% 98%; /* Light text on secondary elements */
+
+    /* Dark mode muted colors */
+    --muted: 217.2 32.6% 17.5%; /* Darker gray muted background */
+    --muted-foreground: 215 20.2% 65.1%; /* Lighter gray text for muted elements */
+
+    /* Dark mode accent colors */
+    --accent: 217.2 32.6% 17.5%; /* Darker gray accent color */
+    --accent-foreground: 210 40% 98%; /* Light text on accent elements */
+
+    /* Dark mode destructive/error colors */
+    --destructive: 0 62.8% 30.6%; /* Darker red for warnings/errors */
+    --destructive-foreground: 210 40% 98%; /* Light text on destructive elements */
+
+    /* Dark mode border, input and focus colors */
+    --border: 217.2 32.6% 17.5%; /* Darker gray border color */
+    --input: 217.2 32.6% 17.5%; /* Darker gray input background */
+    --ring: 212.7 26.8% 83.9%; /* Light focus ring color */
+
+    /* Dark mode sidebar colors */
+    --sidebar-background: 240 5.9% 10%; /* Very dark sidebar background */
+    --sidebar-foreground: 240 4.8% 95.9%; /* Light sidebar text */
+    --sidebar-primary: 224.3 76.3% 48%; /* Blue sidebar primary */
+    --sidebar-primary-foreground: 0 0% 100%; /* White text on sidebar primary */
+    --sidebar-accent: 240 3.7% 15.9%; /* Dark gray sidebar accent */
+    --sidebar-accent-foreground: 240 4.8% 95.9%; /* Light text on sidebar accent */
+    --sidebar-border: 240 3.7% 15.9%; /* Dark gray sidebar borders */
+    --sidebar-ring: 217.2 91.2% 59.8%; /* Blue sidebar focus rings */
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;  /* Apply the border color variable to all borders */
+  }
+
+  body {
+    @apply bg-background text-foreground;  /* Apply background and text colors to the body */
+    font-family: 'Inter', sans-serif;      /* Set the default font family */
+  }
+}
+
+/* Custom styles for Academize dashboard */
+.bg-academize-purple {
+  background-color: #1A1F2C;  /* Dark purple/blue background */
+}
+
+.bg-academize-orange {
+  background-color: #F97316;  /* Orange accent color */
+}
+
+.text-academize-orange {
+  color: #F97316;             /* Orange text color */
+}
+
+.border-academize-orange {
+  border-color: #F97316;      /* Orange border color */
+}
